@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Shoes.ml</title>
+
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <link href="css/animate.css" rel="stylesheet" type="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+    <nav id="slide-menu">
+      <div class="sidenav">
+        <a href="#"><h2>Menu</h2></a>
+        <a href="./index.html">Home</a>
+        <a href="./about.html">About</a>
+        <button class="dropdown-btn">SHOES
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="./jordan1.html"><li>Jordan 1</li></a>
+          <a href="./jordan4.html"><li><b>Jordan 4</b></li></a>
+          <a href="./jordan6.html"><li>Jordan 6</li></a>
+          <a href="./offwhites.html"><li>Off Whites</li></a>
+          <a href="./yeezy.html"><li>YEEZY</li></a>
+          <a href="./dior.html"><li>Dior</li></a>
+          <a href="./nike.html"><li>Nike</li></a>
+        </div>
+        <a href="./contact.html">Contact</a>
+
+      </div>
+
+  </nav>
+  <div id="content">
+    <div class="menu-trigger"></div>
+
+
+      <div id="app">
+      <div v-for="offwhites in offwhites">
+      <div class='row'>
+
+        <div :class="offwhites.colour">
+          <div class='product_inner'>
+            <img :src="offwhites.image" width='300'>
+            <p>{{ offwhites.name }}</p>
+            <p>{{ offwhites.minsize }} to {{ offwhites.maxsize }} UK</p>
+            <p>Price £{{ offwhites.price }}</p>
+            <button class="button style3 fit" :data-sellix-product="offwhites.id" type="submit" alt="Buy Now">Buy</button>
+          </div>
+          <div class='product_overlay'>
+            <h2>Added to basket</h2>
+            <i class='fa fa-check'></i>
+          </div>
+        </div>
+    <!-- Site footer -->
+
+<!-- partial:index.partial.html -->
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js'></script>
+
+</body>
+<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="3366be35cd06e806310ce7b7-|49" defer=""></script></body>
+<script src="https://cdn.sellix.io/static/js/embed.js"></script>
+<script src='https://unpkg.com/vue@2.2.1'></script><script src="./script.js"></script>
+
+</html>
